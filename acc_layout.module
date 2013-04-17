@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Access Layout feature.
+ */
+
+include_once 'acc_layout.features.inc';
