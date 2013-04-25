@@ -69,12 +69,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['label'] = 'Number of Incidents';
   $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['separator'] = ', ';
-  /* Sort criterion: COUNT(Content: Access Constraints (field_field_access_constraint_ac)) */
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['id'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['table'] = 'field_data_field_field_access_constraint_ac';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['field'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['group_type'] = 'count';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
