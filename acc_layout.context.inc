@@ -38,41 +38,29 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-incidents-block_13' => array(
+        'views-764ea14287c8739c34e83899f35bfe20' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_13',
+          'delta' => '764ea14287c8739c34e83899f35bfe20',
           'region' => 'content',
           'weight' => '-8',
         ),
-        'views-incidents-block_2' => array(
+        'views-19861aa67046a617d2b06816cd090bb1' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_2',
+          'delta' => '19861aa67046a617d2b06816cd090bb1',
           'region' => 'content',
           'weight' => '-7',
         ),
-        'views-incidents-block_3' => array(
+        'views-27ff74af7870bf2757d2ef09861c38cb' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_3',
+          'delta' => '27ff74af7870bf2757d2ef09861c38cb',
           'region' => 'content',
           'weight' => '-6',
         ),
-        'views-incidents-block_4' => array(
+        'views-39b041216de73167a2811ada034aed30' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_4',
+          'delta' => '39b041216de73167a2811ada034aed30',
           'region' => 'content',
           'weight' => '-5',
-        ),
-        'views-incidents-block_6' => array(
-          'module' => 'views',
-          'delta' => 'incidents-block_6',
-          'region' => 'content',
-          'weight' => '-4',
-        ),
-        'views-incidents-block_5' => array(
-          'module' => 'views',
-          'delta' => 'incidents-block_5',
-          'region' => 'content',
-          'weight' => '-3',
         ),
         'views-incidents-block_14' => array(
           'module' => 'views',
@@ -114,65 +102,53 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-29',
         ),
-        'views-incidents-block_2' => array(
+        'views-39b041216de73167a2811ada034aed30' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_2',
+          'delta' => '39b041216de73167a2811ada034aed30',
           'region' => 'content',
-          'weight' => '-28',
+          'weight' => '-10',
         ),
-        'views-incidents-block_7' => array(
+        'views-2ca622ee68808b117f82ba255533c6d1' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_7',
+          'delta' => '2ca622ee68808b117f82ba255533c6d1',
           'region' => 'content',
-          'weight' => '-27',
+          'weight' => '-9',
         ),
-        'views-incidents-block_3' => array(
+        'views-764ea14287c8739c34e83899f35bfe20' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_3',
+          'delta' => '764ea14287c8739c34e83899f35bfe20',
           'region' => 'content',
-          'weight' => '-26',
+          'weight' => '-8',
         ),
-        'views-incidents-block_9' => array(
+        'views-82bd34a9512ce49f8ff2edbea6cc47fe' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_9',
+          'delta' => '82bd34a9512ce49f8ff2edbea6cc47fe',
           'region' => 'content',
-          'weight' => '-25',
+          'weight' => '-7',
         ),
-        'views-incidents-block_4' => array(
+        'views-27ff74af7870bf2757d2ef09861c38cb' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_4',
+          'delta' => '27ff74af7870bf2757d2ef09861c38cb',
           'region' => 'content',
-          'weight' => '-24',
+          'weight' => '-6',
         ),
-        'views-incidents-block_10' => array(
+        'views-eaae23bf7047fb2821442446661abd87' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_10',
+          'delta' => 'eaae23bf7047fb2821442446661abd87',
           'region' => 'content',
-          'weight' => '-23',
+          'weight' => '-5',
         ),
-        'views-incidents-block_5' => array(
+        'views-19861aa67046a617d2b06816cd090bb1' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_5',
+          'delta' => '19861aa67046a617d2b06816cd090bb1',
           'region' => 'content',
-          'weight' => '-22',
+          'weight' => '-4',
         ),
-        'views-incidents-block_11' => array(
+        'views-0b8e46365d4e39109b23b625e47d3880' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_11',
+          'delta' => '0b8e46365d4e39109b23b625e47d3880',
           'region' => 'content',
-          'weight' => '-21',
-        ),
-        'views-incidents-block_6' => array(
-          'module' => 'views',
-          'delta' => 'incidents-block_6',
-          'region' => 'content',
-          'weight' => '-20',
-        ),
-        'views-incidents-block_12' => array(
-          'module' => 'views',
-          'delta' => 'incidents-block_12',
-          'region' => 'content',
-          'weight' => '-19',
+          'weight' => '-3',
         ),
       ),
     ),
