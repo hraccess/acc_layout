@@ -81,9 +81,9 @@ function acc_layout_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
-    'menu' => array(
+    'path' => array(
       'values' => array(
-        'taxonomy/term/472' => 'taxonomy/term/472',
+        'dashboard/all-access-constraints' => 'dashboard/all-access-constraints',
       ),
     ),
   );

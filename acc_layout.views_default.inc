@@ -169,7 +169,7 @@ function acc_layout_views_default_views() {
   /* Display: Chart Access Reports By Access Constraint */
   $handler = $view->new_display('block', 'Chart Access Reports By Access Constraint', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Chart Access Reports by Access Constraints';
+  $handler->display->display_options['title'] = 'Access Reports by Access Constraints';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'pie';
@@ -945,7 +945,7 @@ function acc_layout_views_default_views() {
     t('Access Incident By Access Constraint'),
     t('Data export'),
     t('Chart Access Reports By Access Constraint'),
-    t('Chart Access Reports by Access Constraints'),
+    t('Access Reports by Access Constraints'),
     t('Chart Access Reports By Access Constraints'),
     t('Chart Access Reports by Sectors'),
     t('Access Reports By Sectors'),
