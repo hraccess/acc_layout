@@ -62,6 +62,12 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-5',
         ),
+        'boxes-about_humanitarian_access' => array(
+          'module' => 'boxes',
+          'delta' => 'about_humanitarian_access',
+          'region' => 'content',
+          'weight' => '-4',
+        ),
         'views-incidents-block_14' => array(
           'module' => 'views',
           'delta' => 'incidents-block_14',
