@@ -19,7 +19,7 @@ function acc_layout_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'access' => 'access',
+        '<front>' => '<front>',
       ),
     ),
   );

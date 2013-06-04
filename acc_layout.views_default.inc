@@ -56,23 +56,17 @@ function acc_layout_views_default_views() {
     'invert' => 1,
   );
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Access Constraints */
-  $handler->display->display_options['fields']['field_field_access_constraint_ac']['id'] = 'field_field_access_constraint_ac';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac']['table'] = 'field_data_field_field_access_constraint_ac';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac']['field'] = 'field_field_access_constraint_ac';
-  /* Field: COUNT(Content: Access Constraints) */
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['id'] = 'field_field_access_constraint_ac_1';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['table'] = 'field_data_field_field_access_constraint_ac';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['field'] = 'field_field_access_constraint_ac';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['label'] = 'Number of Incidents';
-  $handler->display->display_options['fields']['field_field_access_constraint_ac_1']['separator'] = ', ';
-  /* Sort criterion: COUNT(Content: Sector(s) affected (field_sectors)) */
-  $handler->display->display_options['sorts']['field_sectors_tid']['id'] = 'field_sectors_tid';
-  $handler->display->display_options['sorts']['field_sectors_tid']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['sorts']['field_sectors_tid']['field'] = 'field_sectors_tid';
-  $handler->display->display_options['sorts']['field_sectors_tid']['group_type'] = 'count';
-  $handler->display->display_options['sorts']['field_sectors_tid']['order'] = 'DESC';
+  /* Field: Field: Access Constraint */
+  $handler->display->display_options['fields']['field_access_constraint']['id'] = 'field_access_constraint';
+  $handler->display->display_options['fields']['field_access_constraint']['table'] = 'field_data_field_access_constraint';
+  $handler->display->display_options['fields']['field_access_constraint']['field'] = 'field_access_constraint';
+  /* Field: COUNT(Field: Access Constraint) */
+  $handler->display->display_options['fields']['field_access_constraint_1']['id'] = 'field_access_constraint_1';
+  $handler->display->display_options['fields']['field_access_constraint_1']['table'] = 'field_data_field_access_constraint';
+  $handler->display->display_options['fields']['field_access_constraint_1']['field'] = 'field_access_constraint';
+  $handler->display->display_options['fields']['field_access_constraint_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_access_constraint_1']['label'] = 'Number of reports';
+  $handler->display->display_options['fields']['field_access_constraint_1']['separator'] = ', ';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -89,7 +83,7 @@ function acc_layout_views_default_views() {
     'br_requirement_into_country' => 'br_requirement_into_country',
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
-  /* Filter criterion: Content: Date (field_date) */
+  /* Filter criterion: Content: Date -  start date (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -139,12 +133,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Access Constraints (field_field_access_constraint_ac)) */
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['id'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['table'] = 'field_data_field_field_access_constraint_ac';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['field'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['group_type'] = 'count';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['order'] = 'DESC';
   $handler->display->display_options['block_description'] = 'Access Incident By Access Constraints';
 
   /* Display: Data export */
@@ -154,12 +142,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['provide_file'] = 0;
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Access Constraints (field_field_access_constraint_ac)) */
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['id'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['table'] = 'field_data_field_field_access_constraint_ac';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['field'] = 'field_field_access_constraint_ac_tid';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['group_type'] = 'count';
-  $handler->display->display_options['sorts']['field_field_access_constraint_ac_tid']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'access/dashboard/reports.xls';
   $handler->display->display_options['displays'] = array(
     'block_1' => 'block_1',
@@ -174,20 +156,20 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'pie';
   $handler->display->display_options['style_options']['fields'] = array(
-    'field_field_access_constraint_ac' => array(
+    'field_access_constraint' => array(
       'enabled' => 0,
       'sort' => '0',
     ),
-    'field_field_access_constraint_ac_1' => array(
+    'field_access_constraint_1' => array(
       'enabled' => 1,
-      'sort' => 'DESC',
+      'sort' => '0',
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of incidents',
+    'title' => 'Number of reports',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
-    'labelField' => 'field_field_access_constraint_ac',
+    'labelField' => 'field_access_constraint',
     'invert' => 0,
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -205,19 +187,19 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'bar';
   $handler->display->display_options['style_options']['fields'] = array(
-    'field_sectors' => array(
+    'field_clusters' => array(
       'enabled' => 0,
     ),
-    'field_sectors_1' => array(
+    'field_clusters_1' => array(
       'enabled' => 1,
       'sort' => 'DESC',
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => '',
+    'title' => 'Number of incidents',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
-    'labelField' => 'field_sectors',
+    'labelField' => 'field_clusters',
     'invert' => 0,
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -225,18 +207,17 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Sector(s) affected */
-  $handler->display->display_options['fields']['field_sectors']['id'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Sector(s) affected) */
-  $handler->display->display_options['fields']['field_sectors_1']['id'] = 'field_sectors_1';
-  $handler->display->display_options['fields']['field_sectors_1']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_sectors_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_sectors_1']['separator'] = ', ';
+  /* Field: Content: Clusters */
+  $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
+  /* Field: COUNT(Content: Clusters) */
+  $handler->display->display_options['fields']['field_clusters_1']['id'] = 'field_clusters_1';
+  $handler->display->display_options['fields']['field_clusters_1']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['field'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_clusters_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -256,7 +237,7 @@ function acc_layout_views_default_views() {
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Date (field_date) */
+  /* Filter criterion: Content: Date -  start date (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -308,20 +289,21 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Sector(s) affected */
-  $handler->display->display_options['fields']['field_sectors']['id'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Sector(s) affected) */
-  $handler->display->display_options['fields']['field_sectors_1']['id'] = 'field_sectors_1';
-  $handler->display->display_options['fields']['field_sectors_1']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_sectors_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_sectors_1']['separator'] = ', ';
+  /* Field: Content: Clusters */
+  $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['label'] = 'Sectors/Clusters Affected';
+  $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
+  /* Field: COUNT(Content: Clusters) */
+  $handler->display->display_options['fields']['field_clusters_1']['id'] = 'field_clusters_1';
+  $handler->display->display_options['fields']['field_clusters_1']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['field'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_clusters_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Sector(s) affected (field_sectors)) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['sorts']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['sorts']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -346,7 +328,7 @@ function acc_layout_views_default_views() {
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Date (field_date) */
+  /* Filter criterion: Content: Date -  start date (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -377,19 +359,19 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'bar';
   $handler->display->display_options['style_options']['fields'] = array(
-    'field_admin1_2' => array(
+    'field_locations' => array(
       'enabled' => 0,
     ),
-    'field_admin1_2_1' => array(
+    'field_locations_1' => array(
       'enabled' => 1,
       'sort' => 'DESC',
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => '',
+    'title' => 'Number of incidents',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
-    'labelField' => 'field_admin1_2',
+    'labelField' => 'field_locations',
     'invert' => 0,
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -397,19 +379,18 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Geographical Location (Destination) */
-  $handler->display->display_options['fields']['field_admin1_2']['id'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['label'] = 'Location';
-  $handler->display->display_options['fields']['field_admin1_2']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Geographical Location (Destination)) */
-  $handler->display->display_options['fields']['field_admin1_2_1']['id'] = 'field_admin1_2_1';
-  $handler->display->display_options['fields']['field_admin1_2_1']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_admin1_2_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_admin1_2_1']['separator'] = ', ';
+  /* Field: Field: Location */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  /* Field: COUNT(Field: Location) */
+  $handler->display->display_options['fields']['field_locations_1']['id'] = 'field_locations_1';
+  $handler->display->display_options['fields']['field_locations_1']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_locations_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_locations_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -427,7 +408,7 @@ function acc_layout_views_default_views() {
     'access_incident' => 'access_incident',
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
-  /* Filter criterion: Content: Date (field_date) */
+  /* Filter criterion: Content: Date -  start date (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -478,21 +459,20 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Geographical Location (Destination) */
-  $handler->display->display_options['fields']['field_admin1_2']['id'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['label'] = 'Location';
-  $handler->display->display_options['fields']['field_admin1_2']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Geographical Location (Destination)) */
-  $handler->display->display_options['fields']['field_admin1_2_1']['id'] = 'field_admin1_2_1';
-  $handler->display->display_options['fields']['field_admin1_2_1']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_admin1_2_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_admin1_2_1']['separator'] = ', ';
+  /* Field: Field: Location */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  /* Field: COUNT(Field: Location) */
+  $handler->display->display_options['fields']['field_locations_1']['id'] = 'field_locations_1';
+  $handler->display->display_options['fields']['field_locations_1']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_locations_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_locations_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Geographical Location (Destination) (field_admin1_2)) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_admin1_2_tid']['id'] = 'field_admin1_2_tid';
   $handler->display->display_options['sorts']['field_admin1_2_tid']['table'] = 'field_data_field_admin1_2';
   $handler->display->display_options['sorts']['field_admin1_2_tid']['field'] = 'field_admin1_2_tid';
@@ -515,7 +495,7 @@ function acc_layout_views_default_views() {
     'access_incident' => 'access_incident',
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
-  /* Filter criterion: Content: Date (field_date) */
+  /* Filter criterion: Content: Date -  start date (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
@@ -566,7 +546,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: If denied/delayed, by whom */
+  /* Field: Content: If denied/delayed by whom */
   $handler->display->display_options['fields']['field_responsible_actor']['id'] = 'field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['field'] = 'field_responsible_actor';
@@ -574,7 +554,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor']['settings'] = array(
     'link' => 0,
   );
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: If denied/delayed by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -615,7 +595,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: If denied/delayed, by whom */
+  /* Field: Content: If denied/delayed by whom */
   $handler->display->display_options['fields']['field_responsible_actor']['id'] = 'field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['field'] = 'field_responsible_actor';
@@ -623,7 +603,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor']['settings'] = array(
     'link' => 0,
   );
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: If denied/delayed by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -631,7 +611,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: If denied/delayed by whom (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -667,7 +647,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Administrative request submited by */
+  /* Field: Content: Submited By */
   $handler->display->display_options['fields']['field_targetted_actor']['id'] = 'field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['field'] = 'field_targetted_actor';
@@ -676,7 +656,7 @@ function acc_layout_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_targetted_actor']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Administrative request submited by) */
+  /* Field: COUNT(Content: Submited By) */
   $handler->display->display_options['fields']['field_targetted_actor_1']['id'] = 'field_targetted_actor_1';
   $handler->display->display_options['fields']['field_targetted_actor_1']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor_1']['field'] = 'field_targetted_actor';
@@ -684,7 +664,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_targetted_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_targetted_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Administrative request submited by (field_targetted_actor)) */
+  /* Sort criterion: COUNT(Content: Submited By (field_targetted_actor)) */
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['id'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
@@ -721,7 +701,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Administrative request submited by */
+  /* Field: Content: Submited By */
   $handler->display->display_options['fields']['field_targetted_actor']['id'] = 'field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['field'] = 'field_targetted_actor';
@@ -730,7 +710,7 @@ function acc_layout_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_targetted_actor']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Administrative request submited by) */
+  /* Field: COUNT(Content: Submited By) */
   $handler->display->display_options['fields']['field_targetted_actor_1']['id'] = 'field_targetted_actor_1';
   $handler->display->display_options['fields']['field_targetted_actor_1']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor_1']['field'] = 'field_targetted_actor';
@@ -738,7 +718,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_targetted_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_targetted_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Administrative request submited by (field_targetted_actor)) */
+  /* Sort criterion: COUNT(Content: Submited By (field_targetted_actor)) */
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['id'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
@@ -757,18 +737,17 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['filename'] = '%view_%display.xls';
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Sector(s) affected */
-  $handler->display->display_options['fields']['field_sectors']['id'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Sector(s) affected) */
-  $handler->display->display_options['fields']['field_sectors_1']['id'] = 'field_sectors_1';
-  $handler->display->display_options['fields']['field_sectors_1']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['field'] = 'field_sectors';
-  $handler->display->display_options['fields']['field_sectors_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_sectors_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_sectors_1']['separator'] = ', ';
+  /* Field: Content: Clusters */
+  $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
+  /* Field: COUNT(Content: Clusters) */
+  $handler->display->display_options['fields']['field_clusters_1']['id'] = 'field_clusters_1';
+  $handler->display->display_options['fields']['field_clusters_1']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['field'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_clusters_1']['separator'] = ', ';
   $handler->display->display_options['path'] = 'access/dashboard/sectors.xls';
   $handler->display->display_options['displays'] = array(
     'block_4' => 'block_4',
@@ -796,26 +775,19 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['filename'] = '%view_%display.xls';
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Geographical Location (Destination) */
-  $handler->display->display_options['fields']['field_admin1_2']['id'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2']['label'] = 'Location';
-  $handler->display->display_options['fields']['field_admin1_2']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Geographical Location (Destination)) */
-  $handler->display->display_options['fields']['field_admin1_2_1']['id'] = 'field_admin1_2_1';
-  $handler->display->display_options['fields']['field_admin1_2_1']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['field'] = 'field_admin1_2';
-  $handler->display->display_options['fields']['field_admin1_2_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_admin1_2_1']['label'] = 'Number of Reports';
-  $handler->display->display_options['fields']['field_admin1_2_1']['separator'] = ', ';
+  /* Field: Field: Location */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  /* Field: COUNT(Field: Location) */
+  $handler->display->display_options['fields']['field_locations_1']['id'] = 'field_locations_1';
+  $handler->display->display_options['fields']['field_locations_1']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_locations_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_locations_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Geographical Location (Destination) (field_admin1_2)) */
-  $handler->display->display_options['sorts']['field_admin1_2_tid']['id'] = 'field_admin1_2_tid';
-  $handler->display->display_options['sorts']['field_admin1_2_tid']['table'] = 'field_data_field_admin1_2';
-  $handler->display->display_options['sorts']['field_admin1_2_tid']['field'] = 'field_admin1_2_tid';
-  $handler->display->display_options['sorts']['field_admin1_2_tid']['group_type'] = 'count';
-  $handler->display->display_options['sorts']['field_admin1_2_tid']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'access/dashboard/locations.xls';
   $handler->display->display_options['displays'] = array(
     'block_7' => 'block_7',
@@ -843,7 +815,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['filename'] = '%view_%display.xls';
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: If denied/delayed, by whom */
+  /* Field: Content: If denied/delayed by whom */
   $handler->display->display_options['fields']['field_responsible_actor']['id'] = 'field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['field'] = 'field_responsible_actor';
@@ -851,7 +823,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor']['settings'] = array(
     'link' => 0,
   );
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: If denied/delayed by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -859,7 +831,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: If denied/delayed by whom (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -892,7 +864,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['filename'] = '%view_%display.xls';
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Administrative request submited by */
+  /* Field: Content: Submited By */
   $handler->display->display_options['fields']['field_targetted_actor']['id'] = 'field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor']['field'] = 'field_targetted_actor';
@@ -901,7 +873,7 @@ function acc_layout_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_targetted_actor']['delta_offset'] = '0';
-  /* Field: COUNT(Content: Administrative request submited by) */
+  /* Field: COUNT(Content: Submited By) */
   $handler->display->display_options['fields']['field_targetted_actor_1']['id'] = 'field_targetted_actor_1';
   $handler->display->display_options['fields']['field_targetted_actor_1']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['fields']['field_targetted_actor_1']['field'] = 'field_targetted_actor';
@@ -909,7 +881,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_targetted_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_targetted_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Administrative request submited by (field_targetted_actor)) */
+  /* Sort criterion: COUNT(Content: Submited By (field_targetted_actor)) */
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['id'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
@@ -939,8 +911,8 @@ function acc_layout_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Access Constraints'),
-    t('Number of Incidents'),
+    t('Access Constraint'),
+    t('Number of reports'),
     t('Records Between'),
     t('Access Incident By Access Constraint'),
     t('Data export'),
@@ -949,10 +921,11 @@ function acc_layout_views_default_views() {
     t('Chart Access Reports By Access Constraints'),
     t('Chart Access Reports by Sectors'),
     t('Access Reports By Sectors'),
-    t('Sector(s) affected'),
-    t('Number of Reports'),
+    t('Clusters'),
+    t('Number of incidents'),
     t('Chart Access Reports by sectors'),
     t('Access Reports by Sectors'),
+    t('Sectors/Clusters Affected'),
     t('Access Reports by sector'),
     t('Chart Access Reports by Location'),
     t('Access Reports by Location'),
@@ -960,6 +933,7 @@ function acc_layout_views_default_views() {
     t('Chart Access Reports by Responsible Actor'),
     t('Access Reports by Responsible Actor'),
     t('Responsible Actor'),
+    t('Number of Reports'),
     t('Chart Access reports by Responsible Actor'),
     t('Access reports by Responsible Actor'),
     t('Chart Access Reports by Affected Org'),
