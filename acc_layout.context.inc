@@ -38,9 +38,9 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-incidents-block_16' => array(
+        'views-ffb0044b9160c7361d847d3a43e5256b' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_16',
+          'delta' => 'ffb0044b9160c7361d847d3a43e5256b',
           'region' => 'content',
           'weight' => '-8',
         ),

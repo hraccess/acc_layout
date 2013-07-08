@@ -37,25 +37,29 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'visualization';
-  $handler->display->display_options['style_options']['type'] = 'column';
   $handler->display->display_options['style_options']['fields'] = array(
-    'field_responsible_actor' => array(
+    'field_date' => array(
       'enabled' => 0,
       'sort' => '0',
     ),
-    'field_responsible_actor_1' => array(
+    'field_date_1' => array(
       'enabled' => 1,
-      'sort' => 'ASC',
+      'sort' => '0',
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of Reports',
+    'title' => 'Number of incidents',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
-    'labelField' => 'field_responsible_actor',
-    'invert' => 1,
+    'labelField' => '0',
+    'invert' => 0,
   );
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_date' => 'field_date',
+    'field_date_1' => 'field_date_1',
+  );
+  $handler->display->display_options['row_options']['separator'] = ',';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
@@ -89,15 +93,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Date -  start date (field_date) */
-  $handler->display->display_options['arguments']['field_date_value']['id'] = 'field_date_value';
-  $handler->display->display_options['arguments']['field_date_value']['table'] = 'field_data_field_date';
-  $handler->display->display_options['arguments']['field_date_value']['field'] = 'field_date_value';
-  $handler->display->display_options['arguments']['field_date_value']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_date_value']['default_argument_type'] = 'global_filter_field';
-  $handler->display->display_options['arguments']['field_date_value']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_date_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_date_value']['summary_options']['items_per_page'] = '25';
   /* Contextual filter: Field: Location (field_locations) */
   $handler->display->display_options['arguments']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['arguments']['field_locations_tid']['table'] = 'field_data_field_locations';
@@ -107,6 +102,13 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['arguments']['field_locations_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_locations_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_locations_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Date -  start date (field_date) */
+  $handler->display->display_options['arguments']['field_date_value']['id'] = 'field_date_value';
+  $handler->display->display_options['arguments']['field_date_value']['table'] = 'field_data_field_date';
+  $handler->display->display_options['arguments']['field_date_value']['field'] = 'field_date_value';
+  $handler->display->display_options['arguments']['field_date_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_date_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_date_value']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -899,6 +901,31 @@ function acc_layout_views_default_views() {
     'block_11' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Access Reports by Date */
+  $handler = $view->new_display('block', 'Access Reports by Date', 'block_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Access Reports by Date';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['settings'] = array(
+    'format_type' => 'access_month_only_date_format',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: COUNT(Content: Date) */
+  $handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
+  $handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_date_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_date_1']['separator'] = '';
+  $handler->display->display_options['block_description'] = 'Access Reports by Date';
   $translatables['test_incidents_by_access_constraints'] = array(
     t('Master'),
     t('Access Incident By Access Constraints'),
@@ -952,6 +979,8 @@ function acc_layout_views_default_views() {
     t('XSL Affected Org'),
     t('XLS Affected Org'),
     t('Affected Organizations'),
+    t('Access Reports by Date'),
+    t('Date'),
   );
   $export['test_incidents_by_access_constraints'] = $view;
 
