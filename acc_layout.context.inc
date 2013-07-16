@@ -19,7 +19,7 @@ function acc_layout_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        '<front>' => '<front>',
+        'access' => 'access',
       ),
     ),
   );
@@ -38,9 +38,9 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-ffb0044b9160c7361d847d3a43e5256b' => array(
+        'views-incidents-block_16' => array(
           'module' => 'views',
-          'delta' => 'ffb0044b9160c7361d847d3a43e5256b',
+          'delta' => 'incidents-block_16',
           'region' => 'content',
           'weight' => '-8',
         ),
