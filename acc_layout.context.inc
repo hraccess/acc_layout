@@ -89,7 +89,7 @@ function acc_layout_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'dashboard/all-access-constraints' => 'dashboard/all-access-constraints',
+        'access/dashboard/all-access-constraints' => 'access/dashboard/all-access-constraints',
       ),
     ),
   );
