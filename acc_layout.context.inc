@@ -13,7 +13,7 @@ function acc_layout_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'dashboard';
+  $context->name = 'acc_dashboard';
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
@@ -62,9 +62,9 @@ function acc_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-5',
         ),
-        'boxes-about_humanitarian_access' => array(
+        'boxes-acc_about_humanitarian_access' => array(
           'module' => 'boxes',
-          'delta' => 'about_humanitarian_access',
+          'delta' => 'acc_about_humanitarian_access',
           'region' => 'content',
           'weight' => '-4',
         ),
@@ -78,18 +78,18 @@ function acc_layout_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-  $export['dashboard'] = $context;
+  $export['acc_dashboard'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'reports';
+  $context->name = 'acc_reports';
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'access/dashboard/all-access-constraints' => 'access/dashboard/all-access-constraints',
+        'access/acc_dashboard/all-access-constraints' => 'access/acc_dashboard/all-access-constraints',
       ),
     ),
   );
@@ -160,7 +160,7 @@ function acc_layout_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-  $export['reports'] = $context;
+  $export['acc_reports'] = $context;
 
   return $export;
 }

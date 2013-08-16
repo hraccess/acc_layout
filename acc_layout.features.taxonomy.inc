@@ -9,9 +9,9 @@
  */
 function acc_layout_taxonomy_default_vocabularies() {
   return array(
-    'dashboard' => array(
-      'name' => 'Dashboard',
-      'machine_name' => 'dashboard',
+    'acc_dashboard' => array(
+      'name' => 'acc_Dashboard',
+      'machine_name' => 'acc_dashboard',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

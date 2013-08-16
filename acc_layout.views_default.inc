@@ -11,7 +11,7 @@ function acc_layout_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'test_incidents_by_access_constraints';
+  $view->name = 'acc_incidents_by_access_constraints';
   $view->description = '';
   $view->tag = 'Access';
   $view->base_table = 'node';
@@ -163,7 +163,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['style_options']['provide_file'] = 0;
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['path'] = 'access/dashboard/reports.xls';
+  $handler->display->display_options['path'] = 'access/acc_dashboard/reports.xls';
   $handler->display->display_options['displays'] = array(
     'block_1' => 'block_1',
     'default' => 0,
@@ -704,7 +704,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_clusters_1']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of incidents';
   $handler->display->display_options['fields']['field_clusters_1']['separator'] = ', ';
-  $handler->display->display_options['path'] = 'access/dashboard/sectors.xls';
+  $handler->display->display_options['path'] = 'access/acc_dashboard/sectors.xls';
   $handler->display->display_options['displays'] = array(
     'block_4' => 'block_4',
     'default' => 0,
@@ -762,7 +762,7 @@ function acc_layout_views_default_views() {
     'policy' => 'policy',
     'bureaucratic_requirement_within_' => 'bureaucratic_requirement_within_',
   );
-  $handler->display->display_options['path'] = 'access/dashboard/locations.xls';
+  $handler->display->display_options['path'] = 'access/acc_dashboard/locations.xls';
   $handler->display->display_options['displays'] = array(
     'block_7' => 'block_7',
     'default' => 0,
@@ -822,7 +822,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['group_type'] = 'count';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['order'] = 'DESC';
-  $handler->display->display_options['path'] = 'access/dashboard/responsible_actor.xls';
+  $handler->display->display_options['path'] = 'access/acc_dashboard/responsible_actor.xls';
   $handler->display->display_options['displays'] = array(
     'block_10' => 'block_10',
     'default' => 0,
@@ -883,7 +883,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['group_type'] = 'count';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['order'] = 'DESC';
-  $handler->display->display_options['path'] = 'access/dashboard/affected_org.xls';
+  $handler->display->display_options['path'] = 'access/acc_dashboard/affected_org.xls';
   $handler->display->display_options['displays'] = array(
     'block_12' => 'block_12',
     'default' => 0,
@@ -898,7 +898,7 @@ function acc_layout_views_default_views() {
     'block_11' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
-  $translatables['test_incidents_by_access_constraints'] = array(
+  $translatables['acc_incidents_by_access_constraints'] = array(
     t('Master'),
     t('Access Incident By Access Constraints'),
     t('more'),
@@ -951,7 +951,7 @@ function acc_layout_views_default_views() {
     t('XLS Affected Org'),
     t('Affected Organizations'),
   );
-  $export['test_incidents_by_access_constraints'] = $view;
+  $export['acc_incidents_by_access_constraints'] = $view;
 
   return $export;
 }
