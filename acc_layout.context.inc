@@ -26,51 +26,45 @@ function acc_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-incident_map-block' => array(
+        'views-acc_incident_map-block' => array(
           'module' => 'views',
-          'delta' => 'incident_map-block',
+          'delta' => 'acc_incident_map-block',
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-fb76dd936e2c0b5a00189d8c3fdae3b1' => array(
+        'views-4427e8e55862024fc970a23a5ff766b3' => array(
           'module' => 'views',
-          'delta' => 'fb76dd936e2c0b5a00189d8c3fdae3b1',
+          'delta' => '4427e8e55862024fc970a23a5ff766b3',
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-incidents-block_16' => array(
+        'views-6cd3ea0e92d6446ff8e9517fb7944b5e' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_16',
+          'delta' => '6cd3ea0e92d6446ff8e9517fb7944b5e',
           'region' => 'content',
           'weight' => '-8',
         ),
-        'views-19861aa67046a617d2b06816cd090bb1' => array(
+        'views-00e6a0320dc4829b086d1f85612ca1f2' => array(
           'module' => 'views',
-          'delta' => '19861aa67046a617d2b06816cd090bb1',
+          'delta' => '00e6a0320dc4829b086d1f85612ca1f2',
           'region' => 'content',
           'weight' => '-7',
         ),
-        'views-27ff74af7870bf2757d2ef09861c38cb' => array(
+        'views-e6dfdea8e92229c2f1bc9edaa448f190' => array(
           'module' => 'views',
-          'delta' => '27ff74af7870bf2757d2ef09861c38cb',
+          'delta' => 'e6dfdea8e92229c2f1bc9edaa448f190',
           'region' => 'content',
           'weight' => '-6',
         ),
-        'views-39b041216de73167a2811ada034aed30' => array(
+        'views-97e245152b716aa4b8b5c3854897a9bf' => array(
           'module' => 'views',
-          'delta' => '39b041216de73167a2811ada034aed30',
+          'delta' => '97e245152b716aa4b8b5c3854897a9bf',
           'region' => 'content',
           'weight' => '-5',
         ),
-        'boxes-acc_about_humanitarian_access' => array(
-          'module' => 'boxes',
-          'delta' => 'acc_about_humanitarian_access',
-          'region' => 'content',
-          'weight' => '-4',
-        ),
-        'views-incidents-block_14' => array(
+        'views-acc_incidents-block_14' => array(
           'module' => 'views',
-          'delta' => 'incidents-block_14',
+          'delta' => 'acc_incidents-block_14',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
@@ -96,65 +90,65 @@ function acc_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-fb76dd936e2c0b5a00189d8c3fdae3b1' => array(
+        'views-4427e8e55862024fc970a23a5ff766b3' => array(
           'module' => 'views',
-          'delta' => 'fb76dd936e2c0b5a00189d8c3fdae3b1',
-          'region' => 'content',
-          'weight' => '-30',
-        ),
-        'views-923edfba55d4dda54ea1562753b86b7a' => array(
-          'module' => 'views',
-          'delta' => '923edfba55d4dda54ea1562753b86b7a',
-          'region' => 'content',
-          'weight' => '-29',
-        ),
-        'views-39b041216de73167a2811ada034aed30' => array(
-          'module' => 'views',
-          'delta' => '39b041216de73167a2811ada034aed30',
+          'delta' => '4427e8e55862024fc970a23a5ff766b3',
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-2ca622ee68808b117f82ba255533c6d1' => array(
+        'views-beb797cf4a6ef5245976d83db589bfea' => array(
           'module' => 'views',
-          'delta' => '2ca622ee68808b117f82ba255533c6d1',
+          'delta' => 'beb797cf4a6ef5245976d83db589bfea',
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-764ea14287c8739c34e83899f35bfe20' => array(
+        'views-97e245152b716aa4b8b5c3854897a9bf' => array(
           'module' => 'views',
-          'delta' => '764ea14287c8739c34e83899f35bfe20',
+          'delta' => '97e245152b716aa4b8b5c3854897a9bf',
           'region' => 'content',
           'weight' => '-8',
         ),
-        'views-82bd34a9512ce49f8ff2edbea6cc47fe' => array(
+        'views-9530b237af077598d4d1293f1eb1e5ea' => array(
           'module' => 'views',
-          'delta' => '82bd34a9512ce49f8ff2edbea6cc47fe',
+          'delta' => '9530b237af077598d4d1293f1eb1e5ea',
           'region' => 'content',
           'weight' => '-7',
         ),
-        'views-27ff74af7870bf2757d2ef09861c38cb' => array(
+        'views-6cd3ea0e92d6446ff8e9517fb7944b5e' => array(
           'module' => 'views',
-          'delta' => '27ff74af7870bf2757d2ef09861c38cb',
+          'delta' => '6cd3ea0e92d6446ff8e9517fb7944b5e',
           'region' => 'content',
           'weight' => '-6',
         ),
-        'views-eaae23bf7047fb2821442446661abd87' => array(
+        'views-6cc5ab1d2040eda56f57f420aedcd235' => array(
           'module' => 'views',
-          'delta' => 'eaae23bf7047fb2821442446661abd87',
+          'delta' => '6cc5ab1d2040eda56f57f420aedcd235',
           'region' => 'content',
           'weight' => '-5',
         ),
-        'views-19861aa67046a617d2b06816cd090bb1' => array(
+        'views-00e6a0320dc4829b086d1f85612ca1f2' => array(
           'module' => 'views',
-          'delta' => '19861aa67046a617d2b06816cd090bb1',
+          'delta' => '00e6a0320dc4829b086d1f85612ca1f2',
           'region' => 'content',
           'weight' => '-4',
         ),
-        'views-0b8e46365d4e39109b23b625e47d3880' => array(
+        'views-b158025435e926e6bf2205be53cf6566' => array(
           'module' => 'views',
-          'delta' => '0b8e46365d4e39109b23b625e47d3880',
+          'delta' => 'b158025435e926e6bf2205be53cf6566',
           'region' => 'content',
           'weight' => '-3',
+        ),
+        'views-e6dfdea8e92229c2f1bc9edaa448f190' => array(
+          'module' => 'views',
+          'delta' => 'e6dfdea8e92229c2f1bc9edaa448f190',
+          'region' => 'content',
+          'weight' => '-2',
+        ),
+        'views-5d57683950ee3be3dc1b39fe69f4af6a' => array(
+          'module' => 'views',
+          'delta' => '5d57683950ee3be3dc1b39fe69f4af6a',
+          'region' => 'content',
+          'weight' => '-1',
         ),
       ),
     ),

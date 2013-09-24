@@ -16,6 +16,10 @@ function acc_layout_ctools_plugin_api() {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
+  list($module, $api) = func_get_args();
+  if ($module == "feeds" && $api == "feeds_importer_default") {
+    return array("version" => "1");
+  }
 }
 
 /**
