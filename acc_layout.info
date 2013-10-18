@@ -2,6 +2,7 @@ name = Access Layout
 description = Provide context and views containt data of all content types
 core = 7.x
 package = Humanitarian Access
+version = 7.x-1.0
 dependencies[] = bean
 dependencies[] = boxes
 dependencies[] = context
