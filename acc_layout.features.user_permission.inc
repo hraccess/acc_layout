@@ -13,49 +13,63 @@ function acc_layout_user_default_permissions() {
   // Exported permission: 'administer acc_access_constraints vocabulary terms'.
   $permissions['administer acc_access_constraints vocabulary terms'] = array(
     'name' => 'administer acc_access_constraints vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer acc_dashboard vocabulary terms'.
   $permissions['administer acc_dashboard vocabulary terms'] = array(
     'name' => 'administer acc_dashboard vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer acc_impacts vocabulary terms'.
   $permissions['administer acc_impacts vocabulary terms'] = array(
     'name' => 'administer acc_impacts vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer acc_incident_types vocabulary terms'.
   $permissions['administer acc_incident_types vocabulary terms'] = array(
     'name' => 'administer acc_incident_types vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer acc_type_of_aid_workers vocabulary terms'.
   $permissions['administer acc_type_of_aid_workers vocabulary terms'] = array(
     'name' => 'administer acc_type_of_aid_workers vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer acc_units vocabulary terms'.
   $permissions['administer acc_units vocabulary terms'] = array(
     'name' => 'administer acc_units vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
   // Exported permission: 'administer access_constraint_type vocabulary terms'.
   $permissions['administer access_constraint_type vocabulary terms'] = array(
     'name' => 'administer access_constraint_type vocabulary terms',
-    'roles' => array(),
+    'roles' => array(
+      'manager' => 'manager',
+    ),
     'module' => 'vppr',
   );
 
