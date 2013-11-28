@@ -19,6 +19,15 @@ function acc_layout_user_default_permissions() {
     'module' => 'vppr',
   );
 
+  // Exported permission: 'administer acc_action_taken_type vocabulary terms'.
+  $permissions['administer acc_action_taken_type vocabulary terms'] = array(
+    'name' => 'administer acc_action_taken_type vocabulary terms',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'vppr',
+  );
+
   // Exported permission: 'administer acc_dashboard vocabulary terms'.
   $permissions['administer acc_dashboard vocabulary terms'] = array(
     'name' => 'administer acc_dashboard vocabulary terms',
@@ -183,6 +192,15 @@ function acc_layout_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in acc_action_taken_type'.
+  $permissions['delete terms in acc_action_taken_type'] = array(
+    'name' => 'delete terms in acc_action_taken_type',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in acc_dashboard'.
   $permissions['delete terms in acc_dashboard'] = array(
     'name' => 'delete terms in acc_dashboard',
@@ -250,6 +268,15 @@ function acc_layout_user_default_permissions() {
   // Exported permission: 'edit terms in acc_access_constraints'.
   $permissions['edit terms in acc_access_constraints'] = array(
     'name' => 'edit terms in acc_access_constraints',
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in acc_action_taken_type'.
+  $permissions['edit terms in acc_action_taken_type'] = array(
+    'name' => 'edit terms in acc_action_taken_type',
     'roles' => array(
       'manager' => 'manager',
     ),

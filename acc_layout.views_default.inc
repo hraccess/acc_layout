@@ -496,7 +496,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -548,7 +548,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -604,7 +604,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -660,7 +660,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -794,7 +794,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['relationships']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -854,7 +854,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['table'] = 'field_data_field_targetted_actor';
   $handler->display->display_options['relationships']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Type */
+  /* Field: Field: Type */
   $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
@@ -956,7 +956,7 @@ function acc_layout_views_default_views() {
   $view = new view();
   $view->name = 'access_about';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'Access';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Access About';
   $view->core = 7;
