@@ -71,15 +71,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_access_constraint_1']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_access_constraint_1']['label'] = 'Number of reports';
   $handler->display->display_options['fields']['field_access_constraint_1']['separator'] = ', ';
-  /* Contextual filter: Field: Access Constraint (field_access_constraint) */
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['id'] = 'field_access_constraint_tid';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['table'] = 'field_data_field_access_constraint';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['field'] = 'field_access_constraint_tid';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['default_argument_type'] = 'global_filter_field';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_access_constraint_tid']['summary_options']['items_per_page'] = '25';
   /* Contextual filter: Field: Clusters (field_clusters) */
   $handler->display->display_options['arguments']['field_clusters_tid']['id'] = 'field_clusters_tid';
   $handler->display->display_options['arguments']['field_clusters_tid']['table'] = 'field_data_field_clusters';
@@ -89,16 +80,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Field: Location (field_locations) */
-  $handler->display->display_options['arguments']['field_locations_tid']['id'] = 'field_locations_tid';
-  $handler->display->display_options['arguments']['field_locations_tid']['table'] = 'field_data_field_locations';
-  $handler->display->display_options['arguments']['field_locations_tid']['field'] = 'field_locations_tid';
-  $handler->display->display_options['arguments']['field_locations_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_locations_tid']['default_argument_type'] = 'global_filter_field';
-  $handler->display->display_options['arguments']['field_locations_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_locations_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_locations_tid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Date -  start date (field_date) */
+  /* Contextual filter: Content: Action Taken Date -  start date (field_date) */
   $handler->display->display_options['arguments']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['arguments']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['arguments']['field_date_value']['field'] = 'field_date_value';
@@ -502,7 +484,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Org Type';
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: Issuing actor / agency) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -554,7 +536,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Organization Type';
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: Issuing actor / agency) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -562,7 +544,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: Issuing actor / agency (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -800,7 +782,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Organization Type';
-  /* Field: Content: If denied/delayed, by whom */
+  /* Field: Content: Issuing actor / agency */
   $handler->display->display_options['fields']['field_responsible_actor']['id'] = 'field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['field'] = 'field_responsible_actor';
@@ -808,7 +790,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor']['settings'] = array(
     'link' => 0,
   );
-  /* Field: COUNT(Content: If denied/delayed, by whom) */
+  /* Field: COUNT(Content: Issuing actor / agency) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -816,7 +798,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: Issuing actor / agency (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -965,7 +947,7 @@ function acc_layout_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'About Humanitarian Access';
+  $handler->display->display_options['title'] = 'Humanitarian Access';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -1004,7 +986,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['access_about'] = array(
     t('Master'),
-    t('About Humanitarian Access'),
+    t('Humanitarian Access'),
     t('more'),
     t('Apply'),
     t('Reset'),
