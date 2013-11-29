@@ -984,6 +984,24 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Access Incidents */
+  $handler = $view->new_display('page', 'Access Incidents', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Access Incidents';
+  $handler->display->display_options['path'] = 'access/dashboard/factsheet-access-incidents';
+
+  /* Display: Restriction on movement within the country  */
+  $handler = $view->new_display('page', 'Restriction on movement within the country ', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Restriction on movement within the country ';
+  $handler->display->display_options['path'] = 'access/dashboard/factsheet-restriction-movement';
+
+  /* Display: Impediments of entry into the country */
+  $handler = $view->new_display('page', 'Impediments of entry into the country', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Impediments of entry into the country';
+  $handler->display->display_options['path'] = 'access/dashboard/factsheet-impediments-entry';
   $translatables['access_about'] = array(
     t('Master'),
     t('Humanitarian Access'),
@@ -994,6 +1012,9 @@ function acc_layout_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('About Humanitarian Access '),
+    t('Access Incidents'),
+    t('Restriction on movement within the country '),
+    t('Impediments of entry into the country'),
   );
   $export['access_about'] = $view;
 
