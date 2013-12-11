@@ -80,7 +80,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_clusters_tid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Action Taken Date -  start date (field_date) */
+  /* Contextual filter: Content: Date -  start date (field_date) */
   $handler->display->display_options['arguments']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['arguments']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['arguments']['field_date_value']['field'] = 'field_date_value';
@@ -186,7 +186,7 @@ function acc_layout_views_default_views() {
   /* Display: Chart Access Reports by Sectors */
   $handler = $view->new_display('block', 'Chart Access Reports by Sectors', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Access Reports By Sectors';
+  $handler->display->display_options['title'] = 'Access reports by affected sector';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'bar';
@@ -200,7 +200,7 @@ function acc_layout_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of incidents',
+    'title' => 'Number of reports',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
     'labelField' => 'field_clusters',
@@ -220,7 +220,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_clusters_1']['table'] = 'field_data_field_clusters';
   $handler->display->display_options['fields']['field_clusters_1']['field'] = 'field_clusters';
   $handler->display->display_options['fields']['field_clusters_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_clusters_1']['label'] = 'Number of reports';
   $handler->display->display_options['fields']['field_clusters_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -326,7 +326,7 @@ function acc_layout_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of incidents',
+    'title' => 'Number of reports',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
     'labelField' => 'field_locations',
@@ -347,7 +347,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_locations_1']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations_1']['field'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations_1']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_locations_1']['label'] = 'Number of incidents';
+  $handler->display->display_options['fields']['field_locations_1']['label'] = 'Number of reports';
   $handler->display->display_options['fields']['field_locations_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: COUNT(Field: Location (field_locations)) */
@@ -447,14 +447,13 @@ function acc_layout_views_default_views() {
   /* Display: Chart Access Reports by Responsible Actor */
   $handler = $view->new_display('block', 'Chart Access Reports by Responsible Actor', 'block_8');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Access Reports by Responsible Actor';
+  $handler->display->display_options['title'] = 'Access reports by type of allegedly responsible actor';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'column';
   $handler->display->display_options['style_options']['fields'] = array(
     'field_organization_type' => array(
       'enabled' => 0,
-      'sort' => '0',
     ),
     'field_responsible_actor_1' => array(
       'enabled' => 1,
@@ -462,7 +461,7 @@ function acc_layout_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of incidents',
+    'title' => 'Number of reports',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
     'labelField' => 'field_organization_type',
@@ -484,7 +483,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Org Type';
-  /* Field: COUNT(Content: Issuing actor / agency) */
+  /* Field: COUNT(Content: If denied/delayed, by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -536,7 +535,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Organization Type';
-  /* Field: COUNT(Content: Issuing actor / agency) */
+  /* Field: COUNT(Content: If denied/delayed, by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -544,7 +543,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Issuing actor / agency (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -555,14 +554,13 @@ function acc_layout_views_default_views() {
   /* Display: Chart Access Reports by Affected Org */
   $handler = $view->new_display('block', 'Chart Access Reports by Affected Org', 'block_11');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Access reports By Affected Org';
+  $handler->display->display_options['title'] = 'Access reports by type of affected organization';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'visualization';
   $handler->display->display_options['style_options']['type'] = 'column';
   $handler->display->display_options['style_options']['fields'] = array(
     'field_organization_type' => array(
       'enabled' => 0,
-      'sort' => '0',
     ),
     'field_targetted_actor_1' => array(
       'enabled' => 1,
@@ -570,7 +568,7 @@ function acc_layout_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['yAxis'] = array(
-    'title' => 'Number of incidents',
+    'title' => 'Number of reports',
   );
   $handler->display->display_options['style_options']['xAxis'] = array(
     'labelField' => 'field_organization_type',
@@ -606,7 +604,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['field'] = 'field_targetted_actor_target_id';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['group_type'] = 'count';
   $handler->display->display_options['sorts']['field_targetted_actor_target_id']['order'] = 'DESC';
-  $handler->display->display_options['block_description'] = 'Chart Access reports by Affected Org';
+  $handler->display->display_options['block_description'] = 'Chart Access reports by type of affected organization';
 
   /* Display: Access Reports by Affected Org */
   $handler = $view->new_display('block', 'Access Reports by Affected Org', 'block_12');
@@ -782,7 +780,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['relationship'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Organization Type';
-  /* Field: Content: Issuing actor / agency */
+  /* Field: Content: If denied/delayed, by whom */
   $handler->display->display_options['fields']['field_responsible_actor']['id'] = 'field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor']['field'] = 'field_responsible_actor';
@@ -790,7 +788,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor']['settings'] = array(
     'link' => 0,
   );
-  /* Field: COUNT(Content: Issuing actor / agency) */
+  /* Field: COUNT(Content: If denied/delayed, by whom) */
   $handler->display->display_options['fields']['field_responsible_actor_1']['id'] = 'field_responsible_actor_1';
   $handler->display->display_options['fields']['field_responsible_actor_1']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['fields']['field_responsible_actor_1']['field'] = 'field_responsible_actor';
@@ -798,7 +796,7 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['fields']['field_responsible_actor_1']['label'] = 'Number of Reports';
   $handler->display->display_options['fields']['field_responsible_actor_1']['separator'] = ', ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: COUNT(Content: Issuing actor / agency (field_responsible_actor)) */
+  /* Sort criterion: COUNT(Content: If denied/delayed, by whom (field_responsible_actor)) */
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['id'] = 'field_responsible_actor_target_id';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['table'] = 'field_data_field_responsible_actor';
   $handler->display->display_options['sorts']['field_responsible_actor_target_id']['field'] = 'field_responsible_actor_target_id';
@@ -898,29 +896,32 @@ function acc_layout_views_default_views() {
     t('Access Reports by Access Constraints'),
     t('Chart Access Reports By Access Constraints'),
     t('Chart Access Reports by Sectors'),
-    t('Access Reports By Sectors'),
+    t('Access reports by affected sector'),
     t('Clusters'),
-    t('Number of incidents'),
     t('Chart Access Reports by sectors'),
     t('Access Reports by Sectors'),
+    t('Access Reports By Sectors'),
     t('Sectors/Clusters Affected'),
+    t('Number of incidents'),
     t('Access Reports by sector'),
     t('Chart Access Reports by Location'),
     t('Access Reports by Location'),
     t('Location'),
     t('Chart Access Reports by Responsible Actor'),
-    t('Access Reports by Responsible Actor'),
+    t('Access reports by type of allegedly responsible actor'),
     t('Taxonomy term entity referenced from field_responsible_actor'),
     t('Org Type'),
     t('Number of Reports'),
     t('Chart Access reports by Responsible Actor'),
+    t('Access Reports by Responsible Actor'),
     t('Organization Type'),
     t('Access reports by Responsible Actor'),
     t('Chart Access Reports by Affected Org'),
-    t('Access reports By Affected Org'),
+    t('Access reports by type of affected organization'),
     t('Taxonomy term entity referenced from field_targetted_actor'),
-    t('Chart Access reports by Affected Org'),
+    t('Chart Access reports by type of affected organization'),
     t('Access Reports by Affected Org'),
+    t('Access reports By Affected Org'),
     t('Access reports by Affected Org'),
     t('XSL Sectors'),
     t('XLS Sectors'),
@@ -952,7 +953,6 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     30037204 => '30037204',
-    200153887 => '200153887',
     52310416 => '52310416',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1002,6 +1002,12 @@ function acc_layout_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Impediments of entry into the country';
   $handler->display->display_options['path'] = 'access/dashboard/factsheet-impediments-entry';
+
+  /* Display: Humanitarian Access Import Panel */
+  $handler = $view->new_display('page', 'Humanitarian Access Import Panel', 'page_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Humanitarian Access Import Panel';
+  $handler->display->display_options['path'] = 'access/import_db_parm';
   $translatables['access_about'] = array(
     t('Master'),
     t('Humanitarian Access'),
@@ -1015,6 +1021,7 @@ function acc_layout_views_default_views() {
     t('Access Incidents'),
     t('Restriction on movement within the country '),
     t('Impediments of entry into the country'),
+    t('Humanitarian Access Import Panel'),
   );
   $export['access_about'] = $view;
 
